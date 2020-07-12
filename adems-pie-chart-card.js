@@ -70,11 +70,7 @@ class AdemsPieChartCard extends HTMLElement {
        options: {
             responsive: true,
             maintainAspectRatio: true,
-            animation:  {
-                onProgress: function(animation) {
-                    progress.value = animation.animationObject.currentStep / animation.animationObject.numSteps;
-                }
-            },
+            animation:  { duration: 0 },
             legend: {
                 position: 'bottom',
                 display: true
