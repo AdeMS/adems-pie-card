@@ -1,1 +1,1 @@
-# hassio-power-usage-card
+# adems-power-usage-card
