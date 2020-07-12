@@ -65,17 +65,20 @@ class AdemsPieChartCard extends HTMLElement {
             borderWidth: 1,
             borderColor:'#00c0ef',
             label: 'liveCount',
-    }]
-  },
+          }]
+       },
        options: {
             responsive: true,
             maintainAspectRatio: true,
-            animation: { duration: 0 },
+            animation:  {
+                onProgress: function(animation) {
+                    progress.value = animation.animationObject.currentStep / animation.animationObject.numSteps;
+                }
+            },
             legend: {
                 position: 'bottom',
                 display: true
              },
-            hover: { mode: 'index' },
             plugins: {colorschemes: { scheme: 'brewer.Paired12' } }
         }
     });
