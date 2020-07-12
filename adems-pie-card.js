@@ -23,8 +23,8 @@ class AdemsPieCard extends HTMLElement {
     card.id ='ha-card';
     content.id = 'content';
     canvas.id = 'cnv';
-    content.style.height = '480px';
-    canvas.height=480;
+    content.style.height = '300px';
+    canvas.height=300;
     card.appendChild(content);
     card.appendChild(style);
     content.appendChild(canvas);
@@ -48,8 +48,8 @@ class AdemsPieCard extends HTMLElement {
         const totalEntity =  hass.states[config.total_power_usage]
         const total = (totalEntity.attributes.unit_of_measurement == 'kW') ? totalEntity.state * 1000 : totalEntity.state;
         const measured = hassEntities.map(x => Number(x.state)).reduce(( accumulator, currentValue ) => accumulator + currentValue,  0);
-        entityData.push(total - measured)
-        entityNames.push(config.unknownText ? config.unknownText : 'Unknown');
+        entityData.push(total - measured > 0 ? total - measured : 0)
+        entityNames.push(config.total_power_name ? config.total_power_name : 'the rest of it');
     }
 
     const emptyIndexes = entityData.reduce((arr, e, i) => ((e == 0) && arr.push(i), arr), [])
