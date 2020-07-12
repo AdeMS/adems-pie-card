@@ -48,7 +48,7 @@ class AdemsPieCard extends HTMLElement {
         const totalEntity =  hass.states[config.total_power_usage]
         const total = (totalEntity.attributes.unit_of_measurement == 'kW') ? totalEntity.state * 1000 : totalEntity.state;
         const measured = hassEntities.map(x => Number(x.state)).reduce(( accumulator, currentValue ) => accumulator + currentValue,  0);
-        entityData.push(total - measured > 0 ? total - measured : 0)
+        entityData.push((total - measured) > 0 ? total - measured : 0)
         entityNames.push(config.total_power_name ? config.total_power_name : 'the rest of it');
     }
 
