@@ -23,8 +23,8 @@ class AdemsPieChartCard extends HTMLElement {
     card.id ='ha-card';
     content.id = 'content';
     canvas.id = 'cnv';
-    content.style.height = '300px';
-    canvas.height=300;
+    content.style.height = '480px';
+    canvas.height=480;
     card.appendChild(content);
     card.appendChild(style);
     content.appendChild(canvas);
