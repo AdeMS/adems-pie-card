@@ -23,8 +23,8 @@ class AdemsPieChartCard extends HTMLElement {
     card.id ='ha-card';
     content.id = 'content';
     canvas.id = 'cnv';
-    content.style.height = '480px';
-    canvas.height=480;
+    content.style.height = '300px';
+    canvas.height=300;
     card.appendChild(content);
     card.appendChild(style);
     content.appendChild(canvas);
@@ -79,7 +79,7 @@ class AdemsPieChartCard extends HTMLElement {
                 position: 'bottom',
                 display: true
              },
-            hover: { model: 1 },
+            hover: { mode: index },
             plugins: {colorschemes: { scheme: 'brewer.Paired12' } }
         }
     });
