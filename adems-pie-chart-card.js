@@ -67,7 +67,7 @@ class AdemsPieChartCard extends HTMLElement {
           console.log("ERROR: config.total_amount must be either an entity or number.")
         }
         const measured = hassEntities.map(x => Number(x.state)).reduce(( accumulator, currentValue ) => accumulator + currentValue,  0);
-        entityData.push(total - measured)
+        entityData.push((total - measured) > 0 ? total - measured : 0)
         entityNames.push(config.unknownText ? config.unknownText : 'Unknown');
     }
 
