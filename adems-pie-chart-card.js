@@ -68,7 +68,7 @@ class AdemsPieChartCard extends HTMLElement {
         }
         const measured = hassEntities.map(x => Number(x.state)).reduce(( accumulator, currentValue ) => accumulator + currentValue,  0);
         entityData.push((total - measured) > 0 ? total - measured : 0)
-        entityNames.push(config.unknownText ? config.unknownText : 'Unknown');
+        entityNames.push(config.total_amount_name ? config.total_amount_name : 'Unknown');
     }
 
     const emptyIndexes = entityData.reduce((arr, e, i) => ((e == 0) && arr.push(i), arr), [])
