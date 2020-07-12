@@ -79,6 +79,7 @@ class AdemsPieChartCard extends HTMLElement {
                 position: 'bottom',
                 display: true
              },
+            hover: { model: 1 },
             plugins: {colorschemes: { scheme: 'brewer.Paired12' } }
         }
     });
