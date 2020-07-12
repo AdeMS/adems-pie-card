@@ -70,12 +70,12 @@ class AdemsPieChartCard extends HTMLElement {
        options: {
             responsive: true,
             maintainAspectRatio: true,
-            animation: { duration: 0 },
+            animation: { duration: 1000 },
             legend: {
                 position: 'bottom',
                 display: true
              },
-            hover: { mode: 'index' },
+            hover: { mode: 'point' },
             plugins: {colorschemes: { scheme: 'brewer.Paired12' } }
         }
     });
