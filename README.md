@@ -1,1 +1,0 @@
-# adems-power-usage-card
