@@ -88,7 +88,7 @@ class AdemsPieChartCard extends HTMLElement {
   }
 
   getCardSize() {
-    return 3;
+    return 2;
   }
 }
 
